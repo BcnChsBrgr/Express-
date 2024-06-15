@@ -1,7 +1,10 @@
 [tool.commitizen]
 name = "cz_conventional_commits"
-tag_format = "express/package.json:.version"
+version_files = [
+    "./app/package.json:version"
+]
+tag_format = "$version"
 version_scheme = "semver"
-version = "0.0.1"
+version = "0.1.0"
 update_changelog_on_bump = true
 major_version_zero = true
