@@ -5,9 +5,9 @@ import pages from "../route/pages";
 import database from "../config/database";
 const app: Express = express();
 
-app.set("database.database", database);
+app.set("config.database", database);
 app.disable("x-powered-by");
-console.log(app.get("database.database"));
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
