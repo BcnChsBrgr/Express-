@@ -6,7 +6,7 @@ apiRouter.use((req: Request, res: Response, next: NextFunction) => {
     next();
 });
 
-apiRouter.get("/", function (req: Request, res: Response) {
+apiRouter.get("/health", function (req: Request, res: Response) {
     res.json({ ping: "pong" });
 });
 

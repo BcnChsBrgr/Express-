@@ -2,12 +2,21 @@ import express, { Express } from "express";
 import helmet from "helmet";
 import apis from "../route/apis";
 import pages from "../route/pages";
-import database from "../config/database";
+import compression from "compression";
+import session from "express-session";
+
 const app: Express = express();
 
-app.set("config.database", database);
 app.disable("x-powered-by");
 
+app.use(compression());
+app.set("trust proxy", 1);
+app.use(
+    session({
+        secret: "s3Cur3",
+        name: "sessionId",
+    })
+);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 

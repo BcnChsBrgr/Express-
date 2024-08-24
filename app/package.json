@@ -23,8 +23,12 @@
   },
   "homepage": "https://github.com/BcnChsBrgr/Express-#readme",
   "dependencies": {
+    "@types/compression": "^1.7.5",
+    "@types/express-session": "^1.18.0",
+    "compression": "^1.7.4",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "express-session": "^1.18.0",
     "helmet": "^7.1.0"
   },
   "devDependencies": {
